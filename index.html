@@ -13,36 +13,40 @@
         }
         body {
             background: #f8f9fa;
-            padding: 12px;
+            padding: 8px;
             max-width: 480px;
             margin: 0 auto;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         .title {
             text-align: center;
-            font-size: 28px;
+            font-size: 22px;
             font-weight: bold;
-            margin: 8px 0 10px;
+            margin: 4px 0 6px;
             color: #222;
         }
         .tip {
             text-align: center;
-            font-size: 13px;
+            font-size: 12px;
             color: #666;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         /* 牌数切换 */
         .mode-box {
             display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
+            gap: 8px;
+            margin-bottom: 10px;
         }
         .mode-btn {
             flex: 1;
-            padding: 10px;
+            padding: 8px;
             border: none;
-            border-radius: 10px;
-            font-size: 16px;
+            border-radius: 8px;
+            font-size: 14px;
             font-weight: bold;
             background: #e9ecef;
             color: #555;
@@ -57,48 +61,49 @@
         .player-box {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-shrink: 0;
         }
         .player {
             background: white;
             border: 2px solid #2196F3;
-            border-radius: 12px;
-            padding: 10px 8px;
+            border-radius: 10px;
+            padding: 6px 4px;
             text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }
         .p-name {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             color: #222;
             cursor: pointer;
-            padding: 3px 5px;
-            border-radius: 6px;
+            padding: 2px 4px;
+            border-radius: 4px;
         }
         .p-name:active {
             background: #f0f0f0;
         }
         .p-num {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: bold;
             color: #2196F3;
-            margin: 6px 0;
+            margin: 4px 0;
         }
         .p-btns {
             display: flex;
-            gap: 6px;
+            gap: 4px;
             justify-content: center;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         .btn-p {
-            width: 44px;
-            height: 40px;
-            font-size: 20px;
+            width: 36px;
+            height: 32px;
+            font-size: 18px;
             font-weight: bold;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             background: #e3f2fd;
             color: #2196F3;
             cursor: pointer;
@@ -109,10 +114,10 @@
         }
         /* 开点按钮 */
         .kai-btn {
-            padding: 5px 10px;
-            font-size: 13px;
+            padding: 3px 8px;
+            font-size: 12px;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             background: #ffecb3;
             color: #ff8f00;
             font-weight: bold;
@@ -127,41 +132,51 @@
         .card-box {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+        .card-box::-webkit-scrollbar {
+            width: 2px;
+        }
+        .card-box::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 1px;
         }
         .card {
             background: white;
             border: 2px solid #444;
-            border-radius: 12px;
-            padding: 10px 8px;
+            border-radius: 10px;
+            padding: 6px 4px;
             text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }
         .c-name {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bold;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             color: #222;
         }
         .c-num {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
             color: #f44336;
-            margin: 6px 0;
+            margin: 4px 0;
         }
         .c-btns {
             display: flex;
-            gap: 6px;
+            gap: 4px;
             justify-content: center;
         }
         .btn-c {
-            width: 40px;
-            height: 36px;
-            font-size: 18px;
+            width: 32px;
+            height: 28px;
+            font-size: 16px;
             font-weight: bold;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             background: #e3f2fd;
             color: #2196F3;
             cursor: pointer;
@@ -174,15 +189,16 @@
         /* 重置按钮 */
         .btn-reset {
             width: 100%;
-            padding: 16px;
-            font-size: 18px;
+            padding: 12px;
+            font-size: 16px;
             font-weight: bold;
             border: none;
-            border-radius: 12px;
+            border-radius: 10px;
             background: #2196F3;
             color: white;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 4px;
+            flex-shrink: 0;
         }
     </style>
 </head>
