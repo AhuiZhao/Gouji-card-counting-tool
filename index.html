@@ -294,7 +294,7 @@ function editName(i) {
 // 切换4/6副牌
 function switchMode(m) {
     mode = m;
-    playerTotal = m === 4 ? 36 : 54;
+    playerTotal = m === 4 ? 32 : 48;
     document.getElementById("m4").classList.toggle("active", m === 4);
     document.getElementById("m6").classList.toggle("active", m === 6);
     resetAll();
